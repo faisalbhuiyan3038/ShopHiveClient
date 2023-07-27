@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { ShopModule } from './shop/shop.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ShopModule } from './shop/shop.module';
     HttpClientModule,
     BrowserAnimationsModule,
     CoreModule,
-    ShopModule
+    ShopModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

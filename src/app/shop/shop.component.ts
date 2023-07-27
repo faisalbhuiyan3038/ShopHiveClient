@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
 import { ShopService } from './shop.service';
+import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-shop',
@@ -9,6 +11,7 @@ import { ShopService } from './shop.service';
 })
 export class ShopComponent implements OnInit {
   products: any;
+  faBarsStaggered = faBarsStaggered;
 
   constructor(private shopService: ShopService) {}
 
