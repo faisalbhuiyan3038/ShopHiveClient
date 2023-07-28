@@ -5,9 +5,17 @@
                 <a href="/"
                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                     <fa-icon [icon]="faBarsStaggered" style="margin-right: 1em;" ></fa-icon>
-                    <span class="fs-4">Categories</span>
+                    <span class="fs-4">Filters</span>
                 </a>
                 <hr>
+                <h5 class="text-greenUIDark ml-3">Sort</h5>
+                <select class="form-select">
+                    <option>Alphabetical</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+                <hr>
+                <h5 class="text-greenUIDark ml-3">Categories</h5>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page">
@@ -51,22 +59,9 @@
                     </li>
                 </ul>
                 <hr>
-                <div class="dropdown">
-                    <a href="#"
-                        class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                        <strong>mdo</strong>
-                    </a>
-                    <ul class="dropdown-menu text-small shadow">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Discount-Only Products</label>
                 </div>
             </div>
         </section>

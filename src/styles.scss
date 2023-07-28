@@ -5,3 +5,24 @@
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+.text-greenUILight{
+    color: rgba(135,200,72,255);
+}
+
+.text-greenUIDark{
+    color: rgba(66,134,35,255);
+}
+
+.btn-greenUILight{
+    background-color: rgba(135,200,72,255);
+}
+
+.btn-greenUIDark{
+    background-color: rgba(66,134,35,255);
+}
+
+.form-check-input:checked{
+    background-color: rgba(66,134,35,255);
+    border-color: rgba(135,200,72,255);
+}
