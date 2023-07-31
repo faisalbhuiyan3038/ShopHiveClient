@@ -12,4 +12,8 @@ export class ShopService {
   getProducts(){
     return this.http.get(this.baseUrl+"Product")
   }
+
+  getCategories(){
+    return this.http.get(this.baseUrl+"Category")
+  }
 }

@@ -1,0 +1,11 @@
+<select id="categorySelect" [(ngModel)]="selectedCategory" class="form-select my-3">
+      <!-- Default option with "Choose a Category" text -->
+      <option value="" disabled selected>Choose a Category</option>
+      
+      <!-- Loop through the categories and create options -->
+      <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+    </select>
+  
+  <!-- Display the selected category -->
+  <!-- <p *ngIf="selectedCategory">Selected category: {{ selectedCategory.name }}</p> -->
+  

@@ -16,7 +16,8 @@
                 </select>
                 <hr>
                 <h5 class="text-greenUIDark ml-3">Categories</h5>
-                <ul class="nav nav-pills flex-column mb-auto my-3">
+                <app-category-nav></app-category-nav>
+                <!-- <ul class="nav nav-pills flex-column mb-auto my-3" *ngFor="let item of categories">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page">
                             <svg class="bi pe-none me-2" width="16" height="16">
@@ -25,39 +26,8 @@
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link link-body-emphasis">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#speedometer2"></use>
-                            </svg>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-body-emphasis">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#table"></use>
-                            </svg>
-                            Orders
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-body-emphasis">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#grid"></use>
-                            </svg>
-                            Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-body-emphasis">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#people-circle"></use>
-                            </svg>
-                            Customers
-                        </a>
-                    </li>
-                </ul>
+                    <app-category-nav [category]="item"></app-category-nav>
+                </ul> -->
                 <hr>
                 <div class="form-check form-switch my-3">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">

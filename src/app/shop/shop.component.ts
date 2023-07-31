@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit {
   faBarsStaggered = faBarsStaggered;
 
   constructor(private shopService: ShopService) {}
+ 
 
   ngOnInit(): void {
     this.shopService.getProducts().subscribe({
