@@ -18,7 +18,16 @@
                 <h5 class="text-greenUIDark ml-3">Categories</h5>
                 <!-- <app-category-nav></app-category-nav> -->
                 <ul class="list-group my-3">
-                    <li class="list-group-item" *ngFor="let category of categories">
+                    <li class="list-group-item" 
+                    [class.active]="'All' === this.categoryNameSelected"
+                    (click)="filterProductsByCategory('All')"
+                    >All</li>
+                    <li class="list-group-item" 
+                    *ngFor="let category of categories"
+                    [class.active]="category.name === this.categoryNameSelected"
+                    [value]="category.name"
+                    (click)="filterProductsByCategory(category.name)"
+                    >
                         {{category.name}}
                     </li>
                 </ul>
