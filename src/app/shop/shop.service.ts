@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -9,8 +9,9 @@ export class ShopService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(){
-    return this.http.get(this.baseUrl+"Product")
+  getProducts(categoryName:string){
+    const params = new HttpParams().set('categoryName', categoryName);
+    return this.http.get(this.baseUrl+"Product",{params})
   }
 
   getCategories(){
