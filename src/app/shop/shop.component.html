@@ -16,7 +16,12 @@
                 </select>
                 <hr>
                 <h5 class="text-greenUIDark ml-3">Categories</h5>
-                <app-category-nav></app-category-nav>
+                <!-- <app-category-nav></app-category-nav> -->
+                <ul class="list-group my-3">
+                    <li class="list-group-item" *ngFor="let category of categories">
+                        {{category.name}}
+                    </li>
+                </ul>
                 <!-- <ul class="nav nav-pills flex-column mb-auto my-3" *ngFor="let item of categories">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page">

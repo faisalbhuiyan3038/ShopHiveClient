@@ -12,6 +12,7 @@ import { IProduct } from '../models/product';
 })
 export class ShopComponent implements OnInit {
   products: any;
+  categories: any;
   faBarsStaggered = faBarsStaggered;
 
   constructor(private shopService: ShopService) {}
@@ -20,6 +21,11 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     this.shopService.getProducts().subscribe({
       next: (response) => this.products = response,
+      error: error => console.log(error),
+      complete: () => console.log("Request has completed.")
+    });
+    this.shopService.getCategories().subscribe({
+      next: (response) => {this.categories = response},
       error: error => console.log(error),
       complete: () => console.log("Request has completed.")
     });
