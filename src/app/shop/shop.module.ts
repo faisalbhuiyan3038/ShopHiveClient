@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { CategoryNavComponent } from './category-nav/category-nav.component';
 import { FormsModule } from '@angular/forms';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ShopComponent,
     ProductItemComponent,
-    CategoryNavComponent
+    CategoryNavComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule,

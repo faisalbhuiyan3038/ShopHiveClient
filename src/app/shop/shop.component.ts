@@ -15,14 +15,16 @@ export class ShopComponent implements OnInit {
   categories: any;
   categoryName: string="none";
   faBarsStaggered = faBarsStaggered;
+  loading: boolean = false; // Add a loading flag
 
   constructor(private shopService: ShopService) {}
  
 
   ngOnInit(): void {
+    this.loading = true;
     this.shopService.getProducts(this.categoryName).subscribe({
-      next: (response) => this.products = response,
-      error: error => console.log(error),
+      next: (response) => {this.products = response;this.loading=false},
+      error: error => {console.log(error);this.loading=false},
       complete: () => console.log("Request has completed.")
     });
     this.shopService.getCategories().subscribe({
