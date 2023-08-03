@@ -9,8 +9,9 @@ export class ShopService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts(categoryName:string){
-    const params = new HttpParams().set('categoryName', categoryName);
+  getProducts(categoryName:string,sortBy:string){
+    let params = new HttpParams().set('categoryName', categoryName);
+    params = params.append('sortBy',sortBy);
     return this.http.get(this.baseUrl+"Product",{params})
   }
 

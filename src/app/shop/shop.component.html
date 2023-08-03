@@ -9,10 +9,12 @@
                 </a>
                 <hr>
                 <h5 class="text-greenUIDark ml-3">Sort</h5>
-                <select class="form-select my-3">
-                    <option>Alphabetical</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
+                <select class="form-select my-3" (change)="onSortSelected($event.target.value)">
+                    <option *ngFor="let sort of sortOptions"
+                        [value]="sort.value"
+                    >
+                        {{sort.name}}
+                    </option>
                 </select>
                 <hr>
                 <h5 class="text-greenUIDark ml-3">Categories</h5>
