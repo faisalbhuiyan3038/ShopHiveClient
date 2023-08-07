@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ShopService } from '../shop.service';
-import { ICategory } from 'src/app/models/product';
+import { ICategory } from 'src/app/shared/models/category';
 
 @Component({
   selector: 'app-category-nav',
@@ -8,7 +8,7 @@ import { ICategory } from 'src/app/models/product';
   styleUrls: ['./category-nav.component.scss']
 })
 export class CategoryNavComponent implements OnInit{
-  categories: any;
+  categories: ICategory[]=[];
   selectedCategory:any;
   
   constructor(private shopService: ShopService) {}
