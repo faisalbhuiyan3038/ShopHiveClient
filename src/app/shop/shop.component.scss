@@ -10,3 +10,10 @@
   .active{
     background-color: #267e64;
   }
+
+  /* Custom CSS to style the input form */
+.input-group input {
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 8px 12px; /* Adjust padding as needed */
+}

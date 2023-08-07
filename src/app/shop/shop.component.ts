@@ -13,7 +13,7 @@ import { ICategory } from '../shared/models/category';
 })
 export class ShopComponent implements OnInit {
   products: IProduct[]=[];
-  filteredProducts: any;
+  filteredProducts: IProduct[]=[];
   categories: ICategory[]=[];
   searchQuery: string="";
   //categoryName: string="none";
@@ -53,7 +53,7 @@ export class ShopComponent implements OnInit {
     this.loading = true;
     this.shopService.getProducts(categoryName,sort).subscribe(
       (data: IProduct[]) => {
-        this.products = data || [];
+        this.products = data || [],this.filteredProducts = data || [];
         this.loading=false
       },
       (error) => {
@@ -80,5 +80,15 @@ export class ShopComponent implements OnInit {
     this.getProducts(this.categoryNameSelected,this.sortSelected);
   }
 
-  
+  onSearch() {
+    if (!this.searchQuery) {
+      this.products = this.filteredProducts; // Show all products if search query is empty.
+    } else {
+      this.products = this.filteredProducts.filter(product =>
+        product.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
+  }
+
 }
