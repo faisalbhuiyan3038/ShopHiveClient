@@ -10,6 +10,7 @@ import { ShopModule } from './shop/shop.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     ShopModule,
     FontAwesomeModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

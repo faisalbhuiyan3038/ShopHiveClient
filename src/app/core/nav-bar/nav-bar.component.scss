@@ -3,3 +3,17 @@
     .navbar {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow size and color as needed */
     }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &.active {
+        color: green;
+      }
+    }
+
+    .logo {
+      cursor: pointer;
+      
+    }

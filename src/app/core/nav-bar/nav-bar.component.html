@@ -1,14 +1,14 @@
 <div class="d-flex align-items-center justify-content-between navbar" style="padding-top: 0.5%;">
   <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none" style="padding-left: 3%;">
-    <img src="assets/images/logo.png" style="max-height: 70px;" alt="logo.png">
+    <img src="assets/images/logo.png" style="max-height: 70px;" alt="logo.png" class="logo" routerLink="/">
   </a>
 
   <ul class="nav d-flex justify-content-center flex-wrap" style="padding-left: 3%;">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Shop</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-black">Contact</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-black">FAQs</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-black">About</a></li>
+    <li class="nav-item"><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="nav-link px-2">Home</a></li>
+    <li class="nav-item"><a routerLink="/shop" routerLinkActive="active" class="nav-link px-2">Shop</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2">Contact</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
   </ul>
 
   <div class="text-end" style="padding-right: 3%;">
