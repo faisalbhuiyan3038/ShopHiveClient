@@ -23,7 +23,6 @@ import { HomeModule } from './home/home.module';
     HttpClientModule,
     BrowserAnimationsModule,
     CoreModule,
-    ShopModule,
     FontAwesomeModule,
     HomeModule,
   ],

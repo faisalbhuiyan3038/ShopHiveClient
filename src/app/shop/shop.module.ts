@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { RouterModule } from '@angular/router';
+import { ShopRoutingModule } from './shop-routing.module';
 
 
 
@@ -23,7 +24,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FontAwesomeModule,
     FormsModule,
-    RouterModule,
+    ShopRoutingModule
   ],
   exports: [ShopComponent,ProductDetailsComponent]
 })

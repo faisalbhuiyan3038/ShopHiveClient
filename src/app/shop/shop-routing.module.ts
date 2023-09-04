@@ -4,17 +4,18 @@ import { HomeComponent } from '../home/home.component';
 import { ShopComponent } from './shop.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ShopModule } from './shop.module';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-// const routes: Routes = [
-//   {path: 'shop/:id', component: ProductDetailsComponent},
-// ];
+const routes: Routes = [
+  {path: '', component: ShopComponent},
+  {path: ':id', component: ProductDetailsComponent},
+];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    ShopModule
-  ]
+    RouterModule.forChild(routes)
+  ],
+  exports: [RouterModule]
 })
 export class ShopRoutingModule { }
