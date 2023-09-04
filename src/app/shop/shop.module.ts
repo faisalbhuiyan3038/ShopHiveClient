@@ -25,6 +25,6 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule,
   ],
-  exports: [ShopComponent]
+  exports: [ShopComponent,ProductDetailsComponent]
 })
 export class ShopModule { }
