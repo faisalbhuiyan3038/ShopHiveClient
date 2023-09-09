@@ -10,6 +10,7 @@ import { environment } from "src/environments/environment";
 export class TestErrorComponent implements OnInit {
 
   baseUrl = environment.apiUrl;
+  validationErrors: any;
 
   constructor(private http: HttpClient){
 
@@ -20,7 +21,7 @@ export class TestErrorComponent implements OnInit {
   }
 
   get404Error(){
-    this.http.get(this.baseUrl+"products/42").subscribe(response => {
+    this.http.get(this.baseUrl+'Product/42').subscribe(response => {
       console.log(response);
     }, error => {
       console.log(error);
@@ -28,7 +29,7 @@ export class TestErrorComponent implements OnInit {
   }
 
   get500Error(){
-    this.http.get(this.baseUrl+"buggy/servererror").subscribe(response => {
+    this.http.get(this.baseUrl+"Buggy/servererror").subscribe(response => {
       console.log(response);
     }, error => {
       console.log(error);
@@ -36,7 +37,7 @@ export class TestErrorComponent implements OnInit {
   }
 
   get400Error(){
-    this.http.get(this.baseUrl+"buggy/badrequest").subscribe(response => {
+    this.http.get(this.baseUrl+"Buggy/badrequest").subscribe(response => {
       console.log(response);
     }, error => {
       console.log(error);
@@ -44,10 +45,11 @@ export class TestErrorComponent implements OnInit {
   }
 
   get400ValidationError(){
-    this.http.get(this.baseUrl+"products/fortytwo").subscribe(response => {
+    this.http.get(this.baseUrl+"Product/fortytwo").subscribe(response => {
       console.log(response);
     }, error => {
       console.log(error);
+      this.validationErrors = error.errors;
     });
   }
 }
