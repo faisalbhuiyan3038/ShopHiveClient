@@ -1,6 +1,7 @@
 <div class="container" mt-5>
     <div class="row">
         <section class="col-3">
+            <ng-container *ngIf="categories.length != 0">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary sidebar-scrolling" style="width: 280px;">
                 <a href="/"
                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -50,17 +51,20 @@
                     <label class="form-check-label" for="flexSwitchCheckDefault">Discount-Only Products</label>
                 </div>
             </div>
+            </ng-container>
         </section>
+
         <section class="col-9">
+            
             <div class="d-flex justify-content-between align-items-center pb-2">
                 <div class="input-group" style="width: 100%;">
                   <input class="form-control text-center" placeholder="Search" type="text" [(ngModel)]="searchQuery" (input)="onSearch()">
                 </div>
               </div>
               
-              
+              <ng-container *ngIf="products.length != 0">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              
+                
                 <ng-container *ngIf="loading; else content">
                     <div class="col-md-12" style="min-height: 200px; position: relative;">
                         <app-loading-spinner></app-loading-spinner>
@@ -74,6 +78,7 @@
                 </div>
               </ng-template>
             </div>
+            </ng-container>
           </section>
           
     </div>

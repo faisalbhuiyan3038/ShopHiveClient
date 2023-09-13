@@ -12,6 +12,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 
 @NgModule({
@@ -26,9 +28,11 @@ import { ErrorInterceptor } from './core/interceptors/error.interceptor';
     CoreModule,
     FontAwesomeModule,
     HomeModule,
+    NgxSpinnerModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
