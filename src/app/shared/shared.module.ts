@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-
+import { CarouselModule } from 'ngx-bootstrap/carousel'
 
 
 @NgModule({
@@ -9,7 +9,11 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CarouselModule.forRoot()
+  ],
+  exports: [
+    CarouselModule,
   ]
 })
 export class SharedModule { }
