@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 
 @Component({
@@ -11,10 +12,14 @@ export class ProductItemComponent implements OnInit{
   @Input() product:any;
   faShoppingCart = faShoppingCart;
 
-  constructor(){}
+  constructor(private basketService: BasketService){}
 
   ngOnInit(): void {
     
+  }
+
+  addItemToBasket(){
+    this.basketService.addItemToBasket(this.product);
   }
 
 }
