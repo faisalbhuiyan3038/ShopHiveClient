@@ -1,0 +1,10 @@
+.custom-inline-div {
+    margin-left: 1rem; /* Adjust the margin as needed */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Remove underline from the anchor element within h5 */
+h5 a {
+    text-decoration: none;
+}
