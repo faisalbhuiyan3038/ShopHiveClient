@@ -34,12 +34,14 @@ export class RegisterComponent implements OnInit {
       email: new FormControl('', Validators.required),
       mobile: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
     })
   }
 
   onSubmit() {
-    this.accountService.registerUser(this.registerUser).subscribe(
-      () => {
+    console.log(this.registerForm.value);
+    this.accountService.registerUser(this.registerForm.value).subscribe(
+      (response) => {
         // Handle successful registration here
         this.router.navigateByUrl('/Account/login'); // Redirect to the login page
       },

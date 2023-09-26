@@ -14,6 +14,8 @@ import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module';
 
 
 @NgModule({
@@ -28,7 +30,13 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
     CoreModule,
     FontAwesomeModule,
     HomeModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    RouterModule.forRoot(routes, {
+      enableTracing: false,
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 64],
+    }),
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

@@ -13,8 +13,14 @@
   </ul>
 
   <div class="text-end" style="padding-right: 3%;">
+    <ng-container *ngIf="(currentUser$ | async) === null">
+      <a routerLink="/account/login" class="btn btn-outline-dark me-2">Login</a>
+      <a routerLink="/account/register" class="btn btn-greenUILight">Sign up</a>
+    </ng-container>
+
+    <ng-container *ngIf="currentUser$ | async">
+      <a href="#"> Welcome {{(currentUser$ | async).userName}}</a>
+    </ng-container>
     
-    <a routerLink="/account/login" class="btn btn-outline-dark me-2">Login</a>
-    <a routerLink="/account/register" class="btn btn-greenUILight">Sign up</a>
   </div>
 </div>
