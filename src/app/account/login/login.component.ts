@@ -28,8 +28,7 @@ loginForm: FormGroup;
 
   onSubmit() {
     this.accountService.loginUser(this.loginForm.value).subscribe(() => {
-      console.log("User logged in.")
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/shop');
     },
       // (response) => {
       //   // Handle successful login here

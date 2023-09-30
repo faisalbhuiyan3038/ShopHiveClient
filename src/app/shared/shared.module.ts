@@ -4,6 +4,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { OrderTotalsComponent } from './components/order-totals/order-totals.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown'
 
 
 @NgModule({
@@ -15,12 +16,14 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
     ReactiveFormsModule
   ],
   exports: [
     CarouselModule,
     OrderTotalsComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BsDropdownModule
   ]
 })
 export class SharedModule { }
