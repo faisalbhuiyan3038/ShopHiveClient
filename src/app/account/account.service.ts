@@ -15,19 +15,26 @@ currentUser$ = this.currentUserSource.asObservable();
 
   constructor(private http:HttpClient, private router: Router) { }
 
+  getCurrentUserValue(){
+    return this.currentUserSource.value;
+  }
+
   loadCurrentUser(token: string){
     let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ${token}');
-
-    return this.http.get(this.baseUrl+'Account', {headers}).pipe(
-      map((user:ILoginUser) => {
-        if(user) {
+    headers = headers.set('Authorization', `Bearer ${token}`);
+    console.log(headers);
+  
+    return this.http.get(this.baseUrl + 'Account', { headers }).pipe(
+      map((user: ILoginUser) => {
+        if (user) {
           localStorage.setItem('token', user.token);
+          console.log(user.token);
           this.currentUserSource.next(user);
         }
       })
-    )
+    );
   }
+  
 
   registerUser(user: IRegisterUser): Observable<any> {
     return this.http.post(`${this.baseUrl}Account/register`, user);
