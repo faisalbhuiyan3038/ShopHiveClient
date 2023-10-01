@@ -18,9 +18,13 @@
                                                   <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                               </span>
                                           </div>
-                                          <input formGroupName="username" type="text" id="form3Example1c" class="form-control" placeholder="User Name" />
+                                          <input formControlName="username" type="text" id="form3Example1c" class="form-control" placeholder="User Name" />
+                                      </div>
+                                      <div *ngIf="registerForm.get('username').hasError('required') && registerForm.get('username').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
                                       </div>
                                   </div>
+                                  
 
                                   <div class="mb-4">
                                     <div class="input-group">
@@ -29,8 +33,11 @@
                                                 <i class="fas fa-id-card fa-lg me-3 fa-fw"></i>
                                             </span>
                                         </div>
-                                        <input formGroupName="firstName" type="text" id="form3Example2" class="form-control" placeholder="First Name" />
+                                        <input formControlName="firstName" type="text" id="form3Example2" class="form-control" placeholder="First Name" />
                                     </div>
+                                    <div *ngIf="registerForm.get('firstName').hasError('required') && registerForm.get('firstName').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
                                   </div>
                                   
                                   <div class="mb-4">
@@ -40,8 +47,11 @@
                                                 <i class="fas fa-id-card fa-lg me-3 fa-fw"></i>
                                             </span>
                                         </div>
-                                        <input formGroupName="lastName" type="text" id="form3Example5" class="form-control" placeholder="Last Name" />
+                                        <input formControlName="lastName" type="text" id="form3Example5" class="form-control" placeholder="Last Name" />
                                     </div>
+                                    <div *ngIf="registerForm.get('lastName').hasError('required') && registerForm.get('lastName').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
                                   </div>
                                   
                                   <div class="mb-4">
@@ -51,8 +61,14 @@
                                                 <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                             </span>
                                         </div>
-                                        <input formGroupName="email" type="email" id="form3Example3c" class="form-control" placeholder="Your Email" />
+                                        <input formControlName="email" type="email" id="form3Example3c" class="form-control" placeholder="Your Email" />
                                     </div>
+                                    <div *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
+                                      <div *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched" class="text-danger">
+                                        {{ customValidationMessages.email }}
+                                      </div>
                                   </div>
                                   
                                   <div class="mb-4">
@@ -62,8 +78,14 @@
                                                 <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
                                             </span>
                                         </div>
-                                        <input formGroupName="mobile" type="email" id="form3Example8" class="form-control" placeholder="Mobile" />
+                                        <input formControlName="mobile" type="email" id="form3Example8" class="form-control" placeholder="Mobile" />
                                     </div>
+                                    <div *ngIf="registerForm.get('mobile').hasError('required') && registerForm.get('mobile').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
+                                      <div *ngIf="registerForm.get('mobile').hasError('pattern') && registerForm.get('mobile').touched" class="text-danger">
+                                        {{ customValidationMessages.pattern }}
+                                      </div>
                                   </div>
                                   
                                   <div class="mb-4">
@@ -73,8 +95,11 @@
                                                 <i class="fas fa-address-book fa-lg me-3 fa-fw"></i>
                                             </span>
                                         </div>
-                                        <input formGroupName="address" type="email" id="form3Address" class="form-control" placeholder="Address" />
+                                        <input formControlName="address" type="email" id="form3Address" class="form-control" placeholder="Address" />
                                     </div>
+                                    <div *ngIf="registerForm.get('address').hasError('required') && registerForm.get('address').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
                                   </div>
 
                                   <div class="mb-4">
@@ -84,7 +109,13 @@
                                                   <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                                               </span>
                                           </div>
-                                          <input formGroupName="password" type="password" id="form3Example4c" class="form-control" placeholder="Password" />
+                                          <input formControlName="password" type="password" id="form3Example4c" class="form-control" placeholder="Password" />
+                                      </div>
+                                      <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched" class="text-danger">
+                                        {{ customValidationMessages.required }}
+                                      </div>
+                                      <div *ngIf="registerForm.get('password').hasError('passwordPattern') && registerForm.get('password').touched" class="text-danger">
+                                        {{ customValidationMessages.passwordPattern }}
                                       </div>
                                   </div>
 
