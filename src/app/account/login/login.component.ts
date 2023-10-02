@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ILoginUser } from 'src/app/shared/models/user';
 import { AccountService } from '../account.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
@@ -12,10 +12,12 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class LoginComponent implements OnInit {
 loginForm: FormGroup;
+returnUrl: string;
   // loginUser: ILoginUser = { userName: '', password: '' };
 
-  constructor(private accountService: AccountService, private router: Router) {}
+  constructor(private accountService: AccountService, private router: Router, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
+    this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/shop';
     this.createLoginForm();
   }
 
@@ -28,7 +30,7 @@ loginForm: FormGroup;
 
   onSubmit() {
     this.accountService.loginUser(this.loginForm.value).subscribe(() => {
-      this.router.navigateByUrl('/shop');
+      this.router.navigateByUrl(this.returnUrl);
     },
       // (response) => {
       //   // Handle successful login here
