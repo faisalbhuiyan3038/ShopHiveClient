@@ -1,0 +1,62 @@
+/* Add this to your component's CSS file (about.component.css) */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Style the contact information section */
+  .contact-info {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Style the address section */
+  .address {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

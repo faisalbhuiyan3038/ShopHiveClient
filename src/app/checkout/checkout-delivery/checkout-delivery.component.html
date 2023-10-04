@@ -1,1 +1,25 @@
-<p>checkout-delivery works!</p>
+<div class="mt-4" [formGroup]="deliveryForm">
+    <div class="row">
+        <ng-container *ngFor="let method of deliveryMethods; let i = index">
+            <div class="col-md-6 mb-4">
+                <div class="custom-control custom-radio">
+                    <input type="radio"
+                        id="{{method.id}}"
+                        value="{{method.id}}"
+                        formControlName="deliveryMethod"
+                        class="custom-control-input"
+                    >
+                    <label for="{{method.id}}" class="custom-control-label">
+                        <strong>{{method.shortName}} - {{method.price | currency}}</strong>
+                        <br>
+                        <span class="label-description">
+                            {{method.description}}
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!-- Add a clearfix div to clear the row after every two columns -->
+            <div class="clearfix d-md-none" *ngIf="i % 2 === 1"></div>
+        </ng-container>
+    </div>
+</div>
