@@ -1,0 +1,70 @@
+<div class="mt-4" [formGroup]="checkoutForm">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Shipping Address</h4>
+        <button class="btn btn-outline-success mb-3">
+            Save as default address
+        </button>
+    </div>
+    <div class="row" formGroupName="addressForm">
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="First Name"
+                  class="form-control"
+                >
+                <label for="floatingInput">First Name</label>
+              </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="Last Name"
+                  class="form-control"
+                >
+                <label for="floatingInput">Last Name</label>
+              </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="Street"
+                  class="form-control"
+                >
+                <label for="floatingInput">Street</label>
+              </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="City"
+                  class="form-control"
+                >
+                <label for="floatingInput">City</label>
+              </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="State"
+                  class="form-control"
+                >
+                <label for="floatingInput">State</label>
+              </div>
+        </div>
+        <div class="form-group col-6">
+            <div class="form-floating mb-3">
+                <input 
+                  type="text" 
+                  placeholder="Zip Code"
+                  class="form-control"
+                >
+                <label for="floatingInput">Zip Code</label>
+              </div>
+        </div>
+    </div>
+</div>

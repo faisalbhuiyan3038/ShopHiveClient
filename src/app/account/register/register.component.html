@@ -20,7 +20,7 @@
                                           </div>
                                           <input formControlName="username" type="text" id="form3Example1c" class="form-control" placeholder="User Name" />
                                       </div>
-                                      <div *ngIf="registerForm.get('username').hasError('required') && registerForm.get('username').touched" class="text-danger">
+                                      <div *ngIf="registerForm.get('username').hasError('required') && registerForm.get('username').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
                                   </div>
@@ -35,7 +35,7 @@
                                         </div>
                                         <input formControlName="firstName" type="text" id="form3Example2" class="form-control" placeholder="First Name" />
                                     </div>
-                                    <div *ngIf="registerForm.get('firstName').hasError('required') && registerForm.get('firstName').touched" class="text-danger">
+                                    <div *ngIf="registerForm.get('firstName').hasError('required') && registerForm.get('firstName').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
                                   </div>
@@ -49,7 +49,7 @@
                                         </div>
                                         <input formControlName="lastName" type="text" id="form3Example5" class="form-control" placeholder="Last Name" />
                                     </div>
-                                    <div *ngIf="registerForm.get('lastName').hasError('required') && registerForm.get('lastName').touched" class="text-danger">
+                                    <div *ngIf="registerForm.get('lastName').hasError('required') && registerForm.get('lastName').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
                                   </div>
@@ -63,10 +63,10 @@
                                         </div>
                                         <input formControlName="email" type="email" id="form3Example3c" class="form-control" placeholder="Your Email" />
                                     </div>
-                                    <div *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched" class="text-danger">
+                                    <div *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
-                                      <div *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched" class="text-danger">
+                                      <div *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.email }}
                                       </div>
                                   </div>
@@ -80,10 +80,10 @@
                                         </div>
                                         <input formControlName="mobile" type="email" id="form3Example8" class="form-control" placeholder="Mobile" />
                                     </div>
-                                    <div *ngIf="registerForm.get('mobile').hasError('required') && registerForm.get('mobile').touched" class="text-danger">
+                                    <div *ngIf="registerForm.get('mobile').hasError('required') && registerForm.get('mobile').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
-                                      <div *ngIf="registerForm.get('mobile').hasError('pattern') && registerForm.get('mobile').touched" class="text-danger">
+                                      <div *ngIf="registerForm.get('mobile').hasError('pattern') && registerForm.get('mobile').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.pattern }}
                                       </div>
                                   </div>
@@ -97,7 +97,7 @@
                                         </div>
                                         <input formControlName="address" type="email" id="form3Address" class="form-control" placeholder="Address" />
                                     </div>
-                                    <div *ngIf="registerForm.get('address').hasError('required') && registerForm.get('address').touched" class="text-danger">
+                                    <div *ngIf="registerForm.get('address').hasError('required') && registerForm.get('address').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
                                   </div>
@@ -111,10 +111,10 @@
                                           </div>
                                           <input formControlName="password" type="password" id="form3Example4c" class="form-control" placeholder="Password" />
                                       </div>
-                                      <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched" class="text-danger">
+                                      <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.required }}
                                       </div>
-                                      <div *ngIf="registerForm.get('password').hasError('passwordPattern') && registerForm.get('password').touched" class="text-danger">
+                                      <div *ngIf="registerForm.get('password').hasError('passwordPattern') && registerForm.get('password').touched" class="text-danger" style="margin-left:12%;">
                                         {{ customValidationMessages.passwordPattern }}
                                       </div>
                                   </div>
