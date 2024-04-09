@@ -1,27 +1,82 @@
-# ShopHiveClient
+### You are browsing the frontend for ShopHive E-Commerce Project. [Click to go to the backend.](https://github.com/faisalbhuiyan3038/ShopHive)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+## Tech Stack (for Backend)
 
-## Development server
+- .Net Core Web Api
+- Microsoft SQL Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack (for Frontend)
 
-## Code scaffolding
+- Angular JS
+- Node JS
+- Bootstrap
+- Redis
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Gettng Started
 
-## Build
+To get started with the frontend, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone this repository.
 
-## Running unit tests
+   ```bash
+   git clone https://github.com/faisalbhuiyan3038/ShopHiveClient.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   cd ShopHiveClient
+   ```
 
-## Running end-to-end tests
+2. Install Angular and Node JS.
+3. Install the missing dependencies.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   npm install
+   ```
 
-## Further help
+4. That's it for the backend.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+
+| Feature                                               |  Coded?  | Description                                |
+| ----------------------------------------------------- | :------: | :----------------------------------------- |
+| Add a Product                                         | &#10004; | Ability of Add a Product on the System     |
+| List Products                                         | &#10004; | Ability of List Products                   |
+| Edit a Product                                        | &#10004; | Ability of Edit a Product                  |
+| Delete a Product                                      | &#10004; | Ability of Delete a Product                |
+| Add Item to Cart                                      | &#10004; | Ability to Add Item to Cart                |
+| Delete Items in Cart                                  | &#10004; | Ability to delete the items in Cart        |
+| Modify Quantity in Cart                               | &#10004; | Ability to modify quantity of item in Cart |
+| Checkout                                              | &#10004; | Ability to Checkout with the items in cart |
+| Login/Register Users                                  | &#10004; | Create new users or sign in existing ones  |
+| Generate JsonWebTokens on Login                       | &#10004; | Generate web tokens for security           |
+| Filter Products by Price, Category and Alphabetically | &#10004; | Filter the products                        |
+
+## Website Preview
+
+![Home Page](/Screenshots/1.jpg)
+
+<p align="center">Home Page</p>
+<br>
+
+![Products Page](/Screenshots/2.jpg)
+
+<p align="center">Products Page</p>
+<br>
+
+![Single Product Page](/Screenshots/3.jpg)
+
+<p align="center">Single Product Page</p>
+<br>
+
+![Cart Page](/Screenshots/4.jpg)
+
+<p align="center">Cart Page</p>
+<br>
+
+![Login Page](/Screenshots/5.jpg)
+
+<p align="center">Login Page</p>
+<br>
+
+![Register Page](/Screenshots/6.jpg)
+
+<p align="center">Register Page</p>
+<br>
